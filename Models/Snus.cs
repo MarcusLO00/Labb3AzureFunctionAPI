@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FunctionAppLabb3.Models
 {
-    internal class Product
+    public class Snus
     {
         public int Id { get; set; }
         public string Name { get; set; }
