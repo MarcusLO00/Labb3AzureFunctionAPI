@@ -25,11 +25,11 @@ public class CreateItem
     [Function("CreateItem")]
 
     public async Task<HttpResponseData> Run(
-        [HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequestData req)
+        [HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequestData req)
     {
         //Omvandlar till json, datan bli i en json fil
         string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-        //Konverterar json datan till ett objekt av typen product
+        //Konverterar json datan till ett objekt av typen snus
         Snus? item = JsonSerializer.Deserialize<Snus>(requestBody);
 
         // kontroll av inmating
